@@ -1,0 +1,37 @@
+.form-content {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.form-container input {
+    padding: 15px 30px;
+    outline: none;
+
+
+}
+
+.form-container button {
+    margin: auto;
+    width: 100px;
+    padding: 10px;
+    border: none;
+    color: white;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.form-container button:hover {
+    border-radius: 10px;
+}

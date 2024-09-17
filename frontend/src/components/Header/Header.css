@@ -1,0 +1,99 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    z-index: 1000;
+   padding: 2rem;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+}
+.nav-container h2{
+    margin-left: 20px;
+}
+
+.nav-container ul{
+    margin-right: 40px;
+    display: none;
+    gap: 50px;
+    align-items: center;
+}
+.nav-container ul a{
+    text-decoration: none;
+    color: black;
+}
+.toggler{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+ 
+}
+.nav-container ul{
+    display: flex;
+}
+
+
+@media screen and (max-width:600px){
+   
+    .nav-container ul{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+     
+        top: 0px;
+        gap: 30px;
+        background-color: rgb(54, 54, 54);
+        width: 300px;
+        height: 100vh;
+        z-index: 2;
+        transition: right 0.5s;
+        right:-450px;
+        
+    }
+    .nav-open{
+        display: block;
+        position: fixed;
+        font-size: 1.5rem;
+        right: 30px;
+
+    }
+    .nav-close{
+        display: block;
+        position: relative;
+        top: 20px;
+        font-size: 1.5rem;
+    
+ 
+        z-index: 999;
+    }
+    .nav-container ul a{
+        color: white;
+        padding-left: 150px;
+        gap: 40px;
+       
+    }
+    .nav-container ul{
+        padding: 2rem;
+    }
+    .cancel{
+        font-size: 2rem;
+        cursor: pointer;
+        color: white;
+        position: absolute;
+        width: 50px;
+        height: 5px;
+        left: 40px;
+        
+    }
+
+    .nav-container h2{
+        margin-left: 10px;
+    }
+}
