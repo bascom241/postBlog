@@ -1,10 +1,1 @@
-name: my-blog-app-blueprint
-services:
-  - type: web
-    name: my-blog-app
-    env: node
-    buildCommand: "npm install"
-    startCommand: "npm start"
-    staticPublishPath: "uploads"
-
 
