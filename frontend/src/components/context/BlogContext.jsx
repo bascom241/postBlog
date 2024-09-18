@@ -3,7 +3,7 @@ import React, { createContext,useState, useEffect} from 'react'
 export const BlogContext = createContext(null)
 
 const BlogContextProvider = (props) => {
-  const url = BACKEND_URL;
+  const url = "http://localhost:8000";
   const [posts, setPosts] = useState([])
   // const [token,setToken] = useState('')
   const [token, setToken] = useState(localStorage.getItem('token') || '');
