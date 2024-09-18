@@ -1,3 +1,4 @@
+name: my-blog-app-blueprint
 services:
   - type: web
     name: my-blog-app
@@ -5,4 +6,5 @@ services:
     buildCommand: "npm install"
     startCommand: "npm start"
     staticPublishPath: "uploads"
+
 
