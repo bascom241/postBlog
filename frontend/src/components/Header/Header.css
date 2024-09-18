@@ -92,6 +92,7 @@
         padding: 2rem;
     }
     .cancel{
+        display:block;
         font-size: 2rem;
         cursor: pointer;
         color: white;
