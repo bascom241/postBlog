@@ -38,11 +38,13 @@
     display: flex;
 }
 
-.nav-close{
+ .cancel{
     display: none;
+     
 }
 .nav-open{
     display: none;
+   
 }
 
 @media screen and (max-width:600px){
