@@ -4,7 +4,12 @@ const dotenv = require('dotenv');
 const path = require('path');
  const cors = require('cors');
 
- app.use(cors())
+app.use(cors({
+  origin: '*', 
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
 
 dotenv.config({path:'./.env'})
 const blogRouter = require('./routes/blogRouter')
