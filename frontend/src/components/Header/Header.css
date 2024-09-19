@@ -39,6 +39,13 @@
 }
 
 
+.nav-open{
+    display: none;
+   
+}
+.cancel{
+    display:none;
+}
 @media screen and (max-width:600px){
    
     .nav-container ul{
@@ -83,6 +90,7 @@
         padding: 2rem;
     }
     .cancel{
+        display:block;
         font-size: 2rem;
         cursor: pointer;
         color: white;
