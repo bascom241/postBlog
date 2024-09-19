@@ -74,7 +74,6 @@ exports.editPost = async (req, res) => {
     // Check if an image file is provided
     if (req.file) {
         updateData.image = req.file.filename; // Add the image filename to the updateData object
-        console.log(req.file)
     }
 
     try {
