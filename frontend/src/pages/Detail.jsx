@@ -90,7 +90,7 @@ const navigate = useNavigate();
 
 
         <div className='detail-2'>
-          <img src={`${url}/images/` + post.image} />
+          <img src={post.image} />
           <p>{post.text}</p>
           <button className='delete' onClick={handleDelete}>Delete</button>
         </div>
