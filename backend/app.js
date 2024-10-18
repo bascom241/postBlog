@@ -16,7 +16,7 @@ const blogRouter = require('./routes/blogRouter')
 const userRouter = require('./routes/userRouter')
 
 app.use(express.json())
-app.use('/images',express.static(path.join(__dirname, 'uploads')))
+
 app.use('/api/list/posts', blogRouter)
 app.use('/api/user',userRouter )
 
