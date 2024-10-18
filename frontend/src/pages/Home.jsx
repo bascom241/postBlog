@@ -39,7 +39,7 @@ const Home = () => {
         <div className='content-container' key ={post._id}>
 
           <div className='content-img'>
-            <img src={`${url}/images/`+ post.image}/>
+            <img src={post.image}/>
           </div>
 
         
