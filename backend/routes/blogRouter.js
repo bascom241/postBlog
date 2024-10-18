@@ -1,19 +1,28 @@
 const express = require('express');
 const multer = require('multer')
+const cloudinary = require('cloudinary').v2;
+
+cloudinary.config({
+    cloud_name: 'dyjjx5whw',
+    api_key: '254266613571124',
+    api_secret: 'gtlF7qBIGjC3jLcsDwtBlFLUdiM'
+})
 
 const router = express.Router();
 const blogController = require('../controllers/blogController')
 
 const authContoller = require('../middlewares/authMiddleware')
 
-const storage = multer.diskStorage({
-    'destination': 'uploads',
-    filename:(req,file,cb) =>{
-        cb(null,`${Date.now()}-${file.originalname}`)
-    }
-})
 
-const upload = multer({'storage': storage});
+const storage = new CloudinaryStorage({
+    cloudinary: cloudinary,
+    params: {
+        folder: 'uploads', // Folder name in Cloudinary
+        public_id: (req, file) => `${Date.now()}-${file.originalname}` // Use a unique identifier for the file
+    }
+});
+
+const upload = multer({storage:storage});
 
 router
 .route('/posts')
